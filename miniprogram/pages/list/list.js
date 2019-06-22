@@ -1,25 +1,23 @@
-// miniprogram/pages/index/index.js
+// miniprogram/pages/list/list.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    pageCur: 'home'
-  },
-
-  navChange(e) {
-    console.info(e.currentTarget.dataset.cur)
-    this.setData({
-      pageCur: e.currentTarget.dataset.cur
-    })
+    info: {
+      title: '主题'
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const info = JSON.parse(options.info)
+    this.setData({
+      info
+    })
   },
 
   /**

@@ -1,0 +1,14 @@
+<!--miniprogram/pages/home/index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{false}}">
+  <view slot="content">Vlog 记录生活</view>
+</cu-custom>
+
+<scroll-view scroll-x class="bg-white nav text-center">
+  <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabs}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+    {{item.title}}
+  </view>
+</scroll-view>
+
+<category wx:if="{{TabCur==0}}"></category>
+<share wx:if="{{TabCur==1}}"></share>
+<community wx:if="{{TabCur==2}}"></community>

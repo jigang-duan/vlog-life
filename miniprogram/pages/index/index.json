@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "home": "/pages/home/index",
+    "publish": "/pages/publish/index",
+    "about": "/pages/about/index"
+  }
 }

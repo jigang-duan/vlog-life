@@ -11,6 +11,17 @@ App({
         traceUser: true,
       })
     }
+
+    // 获取系统状态栏信息
+    wx.getSystemInfo({
+      success: e => {
+        this.globalData.StatusBar = e.statusBarHeight;
+        let custom = wx.getMenuButtonBoundingClientRect();
+        this.globalData.Custom = custom;
+        this.globalData.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+        this.globalData.screenHeight = e.screenHeight
+      }
+    })
   },
   onShow(opts) {
     console.log('App Show', opts)
@@ -63,5 +74,9 @@ App({
       this.globalData.openid = res.result.openid
       return res.result.openid
     })
+  },
+
+  globalData: {
+    userInfo: null
   }
 })

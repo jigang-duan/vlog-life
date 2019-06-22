@@ -1,13 +1,24 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/home/index",
+    "pages/publish/index",
+    "pages/about/index",
+    "pages/home/category/category",
+    "pages/home/share/share",
+    "pages/home/community/community",
+    "pages/home/category/add/form_add_category",
+    "pages/list/list"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "演示",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Vlog",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "colorui/components/cu-custom"
   },
   "networkTimeout": {
     "request": 10000,

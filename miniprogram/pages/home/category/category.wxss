@@ -1,0 +1,41 @@
+/* miniprogram/pages/home/category/category.wxss */
+
+.icon {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  border-radius: 12rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  margin-top: 10rpx;
+}
+
+.item {
+  margin: 0 2.5% 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-add-li {
+  padding: 30rpx;
+  border-radius: 12rpx;
+  width: 45%;
+  margin: 0 2.5% 40rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-add-li text {
+  font-size: 80rpx;
+}
+
+.texthover text {
+  color: var(--blue);
+  font-size: 86rpx;
+}

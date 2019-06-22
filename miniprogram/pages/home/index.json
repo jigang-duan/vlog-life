@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "category": "/pages/home/category/category",
+    "share": "/pages/home/share/share",
+    "community": "/pages/home/community/community"
+  }
+}

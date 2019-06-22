@@ -1,0 +1,17 @@
+<!--miniprogram/pages/home/category/category.wxml-->
+<scroll-view scroll-y class="scrollPage" style="height:{{screenHeight-StatusBar-CustomBar-38}}px;" bindscroll="scroll">
+
+  <view class='nav-list'>
+    <view class="nav-li" wx:for="{{list}}" wx:key>
+      <image class="icon" mode="aspectFill" src="{{item.icon}}" bindtap="enterList" data-info="{{item}}"></image>
+      <view class="title"># {{item.title}}</view>
+    </view>
+    <view class="nav-add-li">
+      <navigator hover="true" class="icon center" hover-class="texthover" url="/pages/home/category/add/form_add_category">
+        <text class="cuIcon-add lg text-gray"></text>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='cu-tabbar-height'></view>
+</scroll-view>

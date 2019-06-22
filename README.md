@@ -1,13 +1,12 @@
-# 微信小程序示例
-微信小程序示例源码，欢迎扫描以下小程序码体验。
+# 微信小程序 VlogLife
+微信小程序VlogLife，欢迎扫描以下小程序码体验。
 
 > 提示：请使用微信开发者工具或微信客户端 6.7.2 及以上版本运行。
 
-<img width="200" src="https://developers.weixin.qq.com/miniprogram/dev/image/demo.jpg">
 
 ## 使用
 
-使用[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)打开该示例代码，云开发环境搭建请参考[云开发示例说明](https://github.com/wechat-miniprogram/miniprogram-demo/blob/master/miniprogram/page/cloud/README.md)。
+使用[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)打开该项目
 
 ## 贡献
 
@@ -25,4 +24,4 @@ npm run lint
 
 ## 截图
 
-![截图](https://developers.weixin.qq.com/miniprogram/dev/image/demo.png)
+![截图]()
