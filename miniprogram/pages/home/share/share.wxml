@@ -1,2 +1,33 @@
 <!--miniprogram/pages/home/share/share.wxml-->
-<text>miniprogram/pages/home/share/share.wxml</text>
+<scroll-view scroll-y class="scrollPage" style="height:{{screenHeight-StatusBar-CustomBar-38}}px;" bindscroll="scroll">
+
+  <view class="cu-card case" wx:for="{{list}}" wx:key>
+    <view class="cu-item shadow">
+      <view class="image" bindtap="enterPlayPage" data-item="{{item}}">
+        <image src="{{item.image}}" mode="widthFix"></image>
+        <view class="cu-tag bg-blue">{{item.tag}}</view>
+        <view class="cu-bar bg-shadeBottom">
+          <text class="text-cut">{{item.desc}}</text>
+        </view>
+      </view>
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url({{item.avatar}});"></view>
+          <view class="content flex-sub">
+            <view class="text-grey">{{item.title}}</view>
+            <view class="text-gray text-sm flex justify-between">
+              {{item.date}}
+              <view class="text-gray text-sm">
+                <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.attention}}
+                <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.appreciate}}
+                <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.message}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='cu-tabbar-height'></view>
+</scroll-view>

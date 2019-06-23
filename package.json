@@ -1,7 +1,7 @@
 {
-  "name": "miniprogram-demo",
+  "name": "vlog-life",
   "version": "1.0.0",
-  "description": "WeChat miniprogram demo",
+  "description": "Vlog Life",
   "scripts": {
     "lint": "eslint ."
   },

@@ -1,0 +1,45 @@
+/* miniprogram/pages/play/play.wxss */
+
+.bar-item {
+  flex: 1;
+  text-align: center;
+}
+
+.bar-item [class*="cuIcon-"] {
+  line-height: calc(100rpx + env(safe-area-inset-bottom) / 2);
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.container-head {
+  width: 100%;
+  height: 464rpx;
+}
+
+.player view {
+  position: absolute;
+  width: 100%;
+  height: 464rpx;
+  left: 0;
+  top: 0;
+}
+
+.player .cover {
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+.player .play-button {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container meta-positioner meta {
+  background: rgba(0,0,0,.2);
+  padding: 15px;
+  padding-bottom: 4px;
+}
