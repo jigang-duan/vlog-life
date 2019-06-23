@@ -2,11 +2,11 @@
 const mock = require('../../../mock/mock.js')
 const app = getApp();
 
-Page({
+Component({
+  options: {
+    addGlobalClass: true,
+  },
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
@@ -14,10 +14,12 @@ Page({
     list: mock.list
   },
 
-  enterPlayPage: function (e) {
-    const info = e.currentTarget.dataset.item
-    wx.navigateTo({
-      url: `/pages/play/play?info=${JSON.stringify(info)}`
-    })
-  },
+  methods: {
+    enterPlayPage: function (e) {
+      const info = e.currentTarget.dataset.item
+      wx.navigateTo({
+        url: `/pages/play/play?info=${JSON.stringify(info)}`
+      })
+    }
+  }
 })

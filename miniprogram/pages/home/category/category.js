@@ -1,10 +1,10 @@
 // miniprogram/pages/home/category/category.js
 const app = getApp();
-Page({
+Component({
+  options: {
+    addGlobalClass: true,
+  },
 
-  /**
-   * 页面的初始数据
-   */
   data: {
     StatusBar: app.globalData.StatusBar,
     CustomBar: app.globalData.CustomBar,
@@ -36,13 +36,14 @@ Page({
     ]
   },
 
-  scroll: function(e) {
-    console.log(e)
-  },
-
-  enterList: function(e) {
-    wx.navigateTo({
-      url: `/pages/list/list?info=${JSON.stringify(e.target.dataset.info)}`
-    })
+  methods: {
+    scroll: function(e) {
+      console.log(e)
+    },
+    enterList: function(e) {
+      wx.navigateTo({
+        url: `/pages/list/list?info=${JSON.stringify(e.target.dataset.info)}`
+      })
+    }
   }
 })

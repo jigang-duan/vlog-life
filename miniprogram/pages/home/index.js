@@ -1,23 +1,35 @@
 // miniprogram/pages/home/index.js
-Page({
+const TAGS = [{
+    key: 'category',
+    title: '分类'
+  },
+  {
+    key: 'share',
+    title: '分享'
+  },
+  {
+    key: 'community',
+    title: '社区'
+  }
+]
 
-  /**
-   * 页面的初始数据
-   */
+Component({
+  options: {
+    addGlobalClass: true,
+  },
+
   data: {
     TabCur: 0,
     scrollLeft: 0,
-    tabs: [
-      { key: 'category', title: '分类' },
-      { key: 'share', title: '分享' },
-      { key: 'community', title: '社区' }
-    ]
+    tabs: TAGS
   },
 
-  tabSelect(e) {
-    this.setData({
-      TabCur: e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id - 1) * 60
-    })
+  methods: {
+    tabSelect(e) {
+      this.setData({
+        TabCur: e.currentTarget.dataset.id,
+        scrollLeft: (e.currentTarget.dataset.id - 1) * 60
+      })
+    }
   }
 })

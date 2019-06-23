@@ -2,11 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/home/index",
-    "pages/publish/index",
-    "pages/home/category/category",
-    "pages/home/share/share",
-    "pages/home/community/community",
     "pages/home/category/add/form_add_category",
     "pages/list/list",
     "pages/play/play"
