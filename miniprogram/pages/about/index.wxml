@@ -1,2 +1,13 @@
 <!--miniprogram/pages/about/index.wxml-->
-<text>miniprogram/pages/about/index.wxml</text>
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg bg-gradual-blue">
+    <!-- <image src="/images/logo.png" class="png" mode="widthFix"></image> -->
+    <view class="text-xl">ColorUI组件库
+      <text class="text-df">v2.0</text>
+    </view>
+    <view class="margin-top-sm">
+      <text>By:文晓港</text>
+    </view>
+    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+</scroll-view>
