@@ -5,33 +5,30 @@
 </cu-custom>
 
 <scroll-view scroll-y class="scrollPage">
-  <view class="container-head">
-    <view class="player tc">
-      <video id="myVideo" src="{{src}}" controls style="width:100%;height:464rpx;" poster="{{info.image}}" bindplay="onPlay"></video>
-      <!-- <view class="btn-area">
-        <button bindtap="bindButtonTap">获取视频</button>
-      </view> -->
-      <view wx:if="{{!playing}}" class="cover" style="background-image: url('{{info.image}}');"></view>
-      <view wx:if="{{!playing}}" class="play-button" bindtap="play">
-        <image style="width: 100rpx; height: 100rpx;" src="/images/icon_play.png" mode="scaleToFill"></image>
-      </view>
-    </view>
-  </view>
 
   <view class="cu-card dynamic no-card">
-    <view class="cu-item shadow">
+    <view class="cu-item shadow" wx:for="{{info.items}}" wx:key="{{item.id}}">
+      <view class="container-head">
+        <view class="player tc">
+          <video id="myVideo-{{item.id}}" src="{{item.src}}" controls style="width:100%;height:464rpx;" poster="{{item.image}}" bindplay="onPlay" data-index="{{index}}"></video>
+          <view wx:if="{{!item.played}}" class="cover" style="background-image: url('{{item.image}}');"></view>
+          <view wx:if="{{!item.played}}" class="play-button" bindtap="play" data-index="{{index}}">
+            <image style="width: 100rpx; height: 100rpx;" src="/images/icon_play.png" mode="scaleToFill"></image>
+          </view>
+        </view>
+      </view>
       <view class="cu-list menu-avatar">
         <view class="cu-item">
           <view class="padding flex-sub">
-            <view class="text-xl">{{info.title}}</view>
+            <view class="text-xl">{{item.title}}</view>
             <view class="text-gray text-sm flex justify-between">
-              {{info.date}}
+              {{item.date}}
             </view>
           </view>
         </view>
       </view>
       <view class="text-content">
-        {{info.desc}}
+        {{item.desc}}
       </view>
     </view>
   </view>

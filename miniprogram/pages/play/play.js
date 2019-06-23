@@ -7,7 +7,7 @@ Page({
   data: {
     info: {},
     src: 'https://baobab.kaiyanapp.com/api/v1/playUrl?vid=163507&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&ptl=true',
-    playing: false
+    played: []
   },
 
   /**
@@ -15,9 +15,18 @@ Page({
    */
   onLoad: function (options) {
     const info = JSON.parse(options.info)
-    console.info(info)
+    const vinfo = {
+      ...info,
+      items: info.items.map(it => {
+        return {
+          ...it,
+          src: it.src ? it.src : `https://baobab.kaiyanapp.com/api/v1/playUrl?vid=${it.vid}&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&ptl=true`
+        }
+      })
+    }
+    console.info(vinfo)
     this.setData({
-      info
+      info: vinfo
     })
   },
 
@@ -25,16 +34,25 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.videoContext = wx.createVideoContext('myVideo')
+    this.videoContexts = this.data.info.items.map(it => wx.createVideoContext(`myVideo-${it.id}`))
   },
 
   play: function (e) {
-    this.videoContext.play()
+    const index = e.currentTarget.dataset.index
+    this.videoContexts[index].play()
   },
 
-  onPlay: function () {
+  onPlay: function (e) {
+    const index = e.target.dataset.index
+    const info = this.data.info
+    this.videoContexts.forEach((ctx, i) => {
+      if (index !== i) {
+        ctx.pause()
+      }
+    });
+    info.items[index].played = true
     this.setData({
-      playing: true
+      info
     })
   }
 })

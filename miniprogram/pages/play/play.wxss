@@ -16,6 +16,10 @@
   height: 464rpx;
 }
 
+.player {
+  position: relative;
+}
+
 .player view {
   position: absolute;
   width: 100%;
