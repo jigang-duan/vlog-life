@@ -1,13 +1,34 @@
 <!--miniprogram/pages/about/index.wxml-->
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg bg-gradual-blue">
-    <!-- <image src="/images/logo.png" class="png" mode="widthFix"></image> -->
-    <view class="text-xl">ColorUI组件库
-      <text class="text-df">v2.0</text>
-    </view>
-    <view class="margin-top-sm">
-      <text>By:文晓港</text>
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
     </view>
     <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <navigator class="content" url="/pages/about/log/log" hover-class="none">
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">我的信息</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content"  hover-class="none">
+        <text class="cuIcon-appreciatefill text-red"></text>
+        <text class="text-grey">我的喜欢</text>
+      </navigator>
+    </view>
+    <view class="cu-item arrow">
+      <navigator class="content" hover-class="none">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">我的关注</text>
+      </navigator>
+    </view>
   </view>
 </scroll-view>

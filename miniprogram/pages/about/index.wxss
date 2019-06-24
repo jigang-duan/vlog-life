@@ -13,13 +13,21 @@
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
-.UCenter-bg text {
-  opacity: 0.8;
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.UCenter-bg image {
+.userinfo .avatar {
   width: 200rpx;
   height: 200rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  opacity: 0.8;
 }
 
 .UCenter-bg .gif-wave{

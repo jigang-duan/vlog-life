@@ -1,4 +1,6 @@
 // miniprogram/pages/index/index.js
+const app = getApp()
+
 Page({
 
   /**
@@ -9,7 +11,6 @@ Page({
   },
 
   navChange(e) {
-    console.info(e.currentTarget.dataset.cur)
     this.setData({
       pageCur: e.currentTarget.dataset.cur
     })
