@@ -7,12 +7,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pageCur: 'home'
+    pageCur: 'home',
+    isShowModal: false
   },
 
   navChange(e) {
     this.setData({
       pageCur: e.currentTarget.dataset.cur
+    })
+  },
+
+  showModal() {
+    this.setData({
+      isShowModal: true
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      isShowModal: false
     })
   },
 

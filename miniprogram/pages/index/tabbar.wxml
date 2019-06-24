@@ -8,7 +8,7 @@
   </view>
   <view
     class="action text-gray add-action"
-    bindtap="navChange"
+    bindtap="showModal"
     data-cur="publish"
   >
     <button class="cu-btn cuIcon-add bg-blue shadow"></button>

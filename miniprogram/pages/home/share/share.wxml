@@ -1,5 +1,5 @@
 <!--miniprogram/pages/home/share/share.wxml-->
-<scroll-view scroll-y class="scrollPage" style="height:{{screenHeight-StatusBar-CustomBar-38}}px;" bindscroll="scroll">
+<scroll-view scroll-y class="scrollPage" style="height:{{screenHeight-StatusBar-CustomBar-38}}px;">
 
   <view class="cu-card case" wx:for="{{list}}" wx:key>
     <view class="cu-item shadow">

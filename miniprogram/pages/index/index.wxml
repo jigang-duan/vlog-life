@@ -1,5 +1,14 @@
 <!--miniprogram/pages/index/index.wxml-->
 <home wx:if="{{pageCur=='home'}}"></home>
-<publish wx:if="{{pageCur=='publish'}}"></publish>
 <about wx:if="{{pageCur=='my'}}"></about>
 <include src="tabbar.wxml"/>
+
+<view class="cu-modal bottom-modal {{isShowModal?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-green"></view>
+      <view class="action text-blue" bindtap="hideModal">取消</view>
+    </view>
+    <publish></publish>
+  </view>
+</view>

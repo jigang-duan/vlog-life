@@ -1,1 +1,9 @@
 /* miniprogram/pages/home/index.wxss */
+
+.search-btn {
+  position: fixed;
+  height: 90rpx;
+  line-height: 88rpx;
+  right: 16px;
+  font-size: 34rpx;
+}

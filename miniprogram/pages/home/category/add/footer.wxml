@@ -1,4 +1,4 @@
 <view class="cu-bar btn-group bg-white shadow foot">
-  <button form-type="reset" class="cu-btn bg-gray shadow-blur round">取消</button>
+  <!-- <button form-type="reset" class="cu-btn bg-gray shadow-blur round">取消</button> -->
   <button form-type="submit" class="cu-btn bg-blue shadow-blur round">新增</button>
 </view>

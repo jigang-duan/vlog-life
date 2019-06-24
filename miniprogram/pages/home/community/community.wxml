@@ -1,2 +1,7 @@
 <!--miniprogram/pages/home/community/community.wxml-->
+<scroll-view scroll-y class="scrollPage" style="height:{{screenHeight-StatusBar-CustomBar-38}}px;">
+
 <text>miniprogram/pages/home/community/community.wxml</text>
+
+  <view class='cu-tabbar-height'></view>
+</scroll-view>

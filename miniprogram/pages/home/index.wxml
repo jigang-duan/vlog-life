@@ -9,6 +9,8 @@
   </view>
 </scroll-view>
 
+<navigator class="cuIcon-search cu-btn round bg-white search-btn" style="top:{{CustomBar}}px"></navigator>
+
 <category wx:if="{{TabCur==0}}"></category>
 <share wx:if="{{TabCur==1}}"></share>
 <community wx:if="{{TabCur==2}}"></community>

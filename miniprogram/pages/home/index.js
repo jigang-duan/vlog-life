@@ -1,4 +1,5 @@
 // miniprogram/pages/home/index.js
+const app = getApp();
 const TAGS = [{
     key: 'category',
     title: '分类'
@@ -21,6 +22,7 @@ Component({
   data: {
     TabCur: 0,
     scrollLeft: 0,
+    CustomBar: app.globalData.CustomBar,
     tabs: TAGS
   },
 
