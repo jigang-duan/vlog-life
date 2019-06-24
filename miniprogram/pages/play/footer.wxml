@@ -1,0 +1,12 @@
+<view class='cu-tabbar-height'></view>
+<view class="cu-bar tabbar bg-white foot">
+  <view class="bar-item text-gray">
+    <text class="{{info.isLike?'cuIcon-likefill':'cuIcon-like'}}"></text> 喜欢 * 690
+  </view>
+  <view class="bar-item text-gray">
+    <text class="cuIcon-share"></text> 分享 * 306
+  </view>
+  <view class="bar-item text-gray">
+    <text class="cuIcon-comment"></text> 评论 * 9
+  </view>
+</view>

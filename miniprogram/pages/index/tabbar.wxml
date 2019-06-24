@@ -1,0 +1,27 @@
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view
+    class="{{pageCur=='home'?'action text-blue':'action text-gray'}}" 
+    bindtap="navChange"
+    data-cur="home"
+  >
+    <view class="cuIcon-homefill"></view> 首页
+  </view>
+  <view
+    class="action text-gray add-action"
+    bindtap="navChange"
+    data-cur="publish"
+  >
+    <button class="cu-btn cuIcon-add bg-blue shadow"></button>
+    发布
+  </view>
+  <view
+    class="{{pageCur=='my'?'action text-blue':'action text-gray'}}"
+    bindtap="navChange"
+    data-cur="my"
+  >
+    <view class="cuIcon-my">
+      <view class="cu-tag badge"></view>
+    </view>
+    我的
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/about/log/log" hover-class="none">
+      <text class="cuIcon-formfill text-green"></text>
+      <text class="text-grey">我的信息</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" hover-class="none">
+      <text class="cuIcon-appreciatefill text-red"></text>
+      <text class="text-grey">我的喜欢</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" hover-class="none">
+      <text class="cuIcon-writefill text-cyan"></text>
+      <text class="text-grey">我的关注</text>
+    </navigator>
+  </view>
+</view>
