@@ -33,29 +33,7 @@
     </view>
   </view>
 
-  <view class="cu-bar bg-white solid-bottom margin-top">
-    <view class='action'>
-      <text class='cuIcon-titles text-orange '></text> 评论
-    </view>
-  </view>
-  <view class="cu-card dynamic no-card">
-    <view class="cu-item shadow">
-      <view class="cu-list menu-avatar comment solids-top">
-        <view class="cu-item" wx:for="{{info.comments}}" wx:key>
-          <view class="cu-avatar round" style="background-image:url({{item.avatar}});"></view>
-          <view class="content">
-            <view class="text-grey">{{item.name}}</view>
-            <view class="text-gray text-content text-df">
-              {{item.content}}
-            </view>
-            <view class="margin-top-sm flex justify-between">
-              <view class="text-gray text-df">{{item.date}}</view>
-            </view>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view>
+  <include src="comments.wxml"/>
 
   <include src="footer.wxml"/>
 </scroll-view>
