@@ -20,6 +20,9 @@ Component({
       wx.navigateTo({
         url: `/pages/play/play?info=${JSON.stringify(info)}`
       })
+    },
+    scrolltolower: function (e) {
+      console.log(e)
     }
   }
 })

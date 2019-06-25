@@ -30,7 +30,7 @@ Component({
       {
         key: 'learning',
         title: '学习',
-        desc: '学习使我快乐',
+        desc: '朝牛逼的道路一路狂奔!',
         icon: '/images/learning.jpeg'
       }
     ]
