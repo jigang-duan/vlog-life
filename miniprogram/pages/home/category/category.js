@@ -1,5 +1,8 @@
 // miniprogram/pages/home/category/category.js
 const app = getApp();
+
+
+
 Component({
   options: {
     addGlobalClass: true,
@@ -36,11 +39,29 @@ Component({
     ]
   },
 
+  lifetimes: {
+    attached() {
+      console.log('Component-category lifetimes >> attached')
+      app.getUserOpenId((err, openid) => {
+        if (err) {
+          return
+        }
+        wx.request({
+          url: `${app.globalData.config.baseUrl}/categories`,
+          method: 'GET',
+          success(res) {
+            console.info(res)
+          }
+        })
+      })
+    }
+  },
+
   methods: {
-    scroll: function(e) {
+    scroll(e) {
       console.log(e)
     },
-    enterList: function(e) {
+    enterList(e) {
       wx.navigateTo({
         url: `/pages/list/list?info=${JSON.stringify(e.target.dataset.info)}`
       })
