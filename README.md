@@ -26,10 +26,10 @@ npm run lint
 
 ## 截图
 
-<div style="display: flex;flex-wrap: wrap;">
-    <img src="./doc/vlog.gif" width="100%" height="auto" alt="日历效果图"/>
-    <img src="./doc/vlog3.fig.gif" width="100%" height="auto" alt="日历效果图"/>
-    <img src="./doc/vlog4.gif" width="100%" height="auto" alt="日历效果图"/>
-    <img src="./doc/vlog5.gif" width="100%" height="auto" alt="日历效果图"/>
-    <img src="./doc/vlog2.gif" width="100%" height="auto" alt="日历效果图"/>
+<div >
+    <img src="./doc/vlog.gif" width="auto" height="auto" alt="日历效果图"/>
+    <img src="./doc/vlog3.fig.gif" width="auto" height="auto" alt="日历效果图"/>
+    <img src="./doc/vlog4.gif" width="auto" height="auto" alt="日历效果图"/>
+    <img src="./doc/vlog5.gif" width="auto" height="auto" alt="日历效果图"/>
+    <img src="./doc/vlog2.gif" width="auto" height="auto" alt="日历效果图"/>
 </div>
