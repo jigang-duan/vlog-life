@@ -17,13 +17,21 @@
 ```
 npm install
 ```
+
 同时，确保你的代码可以通过 Lint 检查：
+
 ```
 npm run lint
 ```
 
 ## 截图
 
-主页 | 我的
--- | --
-![截图](./doc/vlog.gif) | ![截图](./doc/vlog2.gif)
+![截图](./doc/vlog.gif)
+
+![截图](./doc/vlog3.fig.gif)
+
+![截图](./doc/vlog4.gif)
+
+![截图](./doc/vlog5.gif)
+
+![截图](./doc/vlog2.gif)
