@@ -26,7 +26,7 @@ npm run lint
 
 ## 截图
 
-<div align=center>
+<div style="display: flex;flex-wrap: wrap;">
     <img src="./doc/vlog.gif" width="100%" height="auto" alt="日历效果图"/>
     <img src="./doc/vlog3.fig.gif" width="100%" height="auto" alt="日历效果图"/>
     <img src="./doc/vlog4.gif" width="100%" height="auto" alt="日历效果图"/>
