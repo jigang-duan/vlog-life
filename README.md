@@ -24,4 +24,6 @@ npm run lint
 
 ## 截图
 
-![截图]()
+主页 | 我的
+-- | --
+![截图](./doc/vlog.gif) | ![截图](./doc/vlog2.gif)
