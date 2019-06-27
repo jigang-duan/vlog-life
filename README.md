@@ -26,12 +26,10 @@ npm run lint
 
 ## 截图
 
-![截图](./doc/vlog.gif)
-
-![截图](./doc/vlog3.fig.gif)
-
-![截图](./doc/vlog4.gif)
-
-![截图](./doc/vlog5.gif)
-
-![截图](./doc/vlog2.gif)
+<div align=center>
+    <img src="./doc/vlog.gif" width="100%" height="auto" alt="日历效果图"/>
+    <img src="./doc/vlog3.fig.gif" width="100%" height="auto" alt="日历效果图"/>
+    <img src="./doc/vlog4.gif" width="100%" height="auto" alt="日历效果图"/>
+    <img src="./doc/vlog5.gif" width="100%" height="auto" alt="日历效果图"/>
+    <img src="./doc/vlog2.gif" width="100%" height="auto" alt="日历效果图"/>
+</div>
