@@ -1,13 +1,15 @@
 const list = [
   {
     id: '1',
-    image: 'http://img.kaiyanapp.com/f1ae1cd706655db9fd23b177d0477798.jpeg',
+    imageUrl: 'http://img.kaiyanapp.com/f1ae1cd706655db9fd23b177d0477798.jpeg',
     tag: '主题',
     type: 'theme',
     desc: '活着的意义就是在轮回中挣扎!',
-    avatar: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg',
+    avatar: {
+      avatarUrl: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg'
+    },
     title: '活着的意义',
-    date: '十天前',
+    createdTime: '十天前',
     items: [
       {
         id: 'v-1-1',

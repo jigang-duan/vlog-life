@@ -18,6 +18,19 @@ Component({
   methods: {
     getUserInfo: function (e) {
       app.globalData.userInfo = e.detail.userInfo
+      app.getUserOpenId((err, openid) => {
+        if (err) {
+          return
+        }
+        wx.request({
+          url: `${app.globalData.config.baseUrl}/weapp/users`,
+          method: 'PUT',
+          header: {
+            'x-userid': openid
+          },
+          data: e.detail.userInfo
+        })
+      })
       this.setData({
         userInfo: e.detail.userInfo,
         hasUserInfo: true

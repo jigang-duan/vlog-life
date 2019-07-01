@@ -1,5 +1,5 @@
 <!--miniprogram/pages/index/index.wxml-->
-<home wx:if="{{pageCur=='home'}}"></home>
+<home id="home" wx:if="{{pageCur=='home'}}"></home>
 <about wx:if="{{pageCur=='my'}}"></about>
 <include src="tabbar.wxml"/>
 

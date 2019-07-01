@@ -85,10 +85,19 @@ function compareVersion(v1, v2) {
   return 0
 }
 
+const mapResWithTime = res => ({
+  ...res.data,
+  list: (res.data.list || []).map(it => ({
+    ...it,
+    createdTime: formatDateTime(new Date(it.createdTime))
+  }))
+})
+
 module.exports = {
   formatTime,
   formatLocation,
   fib,
   formatDateTime,
-  compareVersion
+  compareVersion,
+  mapResWithTime
 }

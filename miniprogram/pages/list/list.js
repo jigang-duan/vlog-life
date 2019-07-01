@@ -1,5 +1,7 @@
 // miniprogram/pages/list/list.js
-const mock = require('../../mock/mock.js')
+const apis = require('./apis')
+
+const app = getApp()
 
 Page({
 
@@ -10,7 +12,8 @@ Page({
     info: {
       title: '主题'
     },
-    list: mock.list
+    total: 0,
+    list: []
   },
 
   enterPlayPage: function(e) {
@@ -20,13 +23,48 @@ Page({
     })
   },
 
+  scrolltolower(e) {
+    const {
+      list,
+      total,
+      info
+    } = this.data
+    const offset = list.length
+    if (offset < total) {
+      console.info('scrolltolower', offset)
+      apis.fetchFoods({
+        categoryId: info.id,
+        offset: offset,
+        limit: 5
+      }, data => {
+        this.setData({
+          list: [...list, ...data.list],
+          total: data.total
+        })
+      })
+    }
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     const info = JSON.parse(options.info)
+    console.debug(info)
     this.setData({
       info
+    })
+
+    apis.fetchFoods({
+      categoryId: info.id,
+      offset: 0,
+      limit: 5
+    }, data => {
+      console.debug(data)
+      this.setData({
+        list: data.list,
+        total: data.total
+      })
     })
   }
 })

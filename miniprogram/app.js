@@ -16,6 +16,7 @@ App({
           wx.getUserInfo({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
+              console.info('获取用户', res)
               this.globalData.userInfo = res.userInfo
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -67,9 +68,14 @@ App({
               code: data.code
             },
             success(res) {
-              console.log('拉取openid成功', res)
-              self.globalData.openid = res.data.openid
-              callback(null, self.globalData.openid)
+              if (res.statusCode >= 400) {
+                console.log('服务返回的错误', res)
+                callback(res)
+              } else {
+                console.log('拉取openid成功', res)
+                self.globalData.openid = res.data.openid
+                callback(null, self.globalData.openid)
+              }
             },
             fail(res) {
               console.log('拉取用户openid失败，将无法正常使用开放接口等服务', res)

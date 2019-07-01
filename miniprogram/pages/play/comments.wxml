@@ -1,4 +1,4 @@
-<view class="cu-bar bg-white solid-bottom margin-top">
+<view wx:if="{{info.comments && info.comments.length}}" class="cu-bar bg-white solid-bottom margin-top">
   <view class='action'>
     <text class='cuIcon-titles text-orange '></text> 评论
   </view>

@@ -38,7 +38,7 @@ const config = {
   subscribeMessageUrl: `${scheme}://${host}/${weapp}/subscribeMessage`,
 
   // 上传文件接口
-  uploadFileUrl: `${scheme}://${host}/${weapp}/upload`,
+  uploadFileUrl: `${scheme}://${host}/multipart/upload`,
 
   // 下载示例图片接口
   downloadExampleUrl: `${scheme}://${host}/static/weapp.jpg`

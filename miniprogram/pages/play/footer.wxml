@@ -1,5 +1,5 @@
 <view class='cu-tabbar-height'></view>
-<view class="cu-bar tabbar bg-white foot">
+<!-- <view class="cu-bar tabbar bg-white foot">
   <button class="cu-btn bar-item bg-white text-red">
     <text class="{{info.isLike?'cuIcon-likefill':'cuIcon-like'}}"></text>
     喜欢 * 690
@@ -11,5 +11,12 @@
   <button class="cu-btn bar-item bg-white text-olive">
     <text class="cuIcon-comment"></text>
     评论 * 9
+  </button>
+</view> -->
+
+<view wx:if="{{oneself}}" class="cu-bar tabbar bg-white foot">
+  <button disabled="{{isShared}}" class="cu-btn bar-item bg-white text-blue" bindtap="tapShare">
+    <text class="cuIcon-share"></text>
+    {{ isShared ? '已分享' : '分享' }}
   </button>
 </view>

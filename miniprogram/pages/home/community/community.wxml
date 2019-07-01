@@ -1,18 +1,18 @@
 <!--miniprogram/pages/home/community/community.wxml-->
-<scroll-view scroll-y class="scrollPage" style="height:{{screenHeight-StatusBar-CustomBar-38}}px;">
+<scroll-view scroll-y class="scrollPage" style="height:{{screenHeight-StatusBar-CustomBar-38}}px;" bindscrolltolower="scrolltolower">
 
   <view class="grid col-2 margin-bottom text-center">
     <view class="cu-card case" wx:for="{{list}}" wx:key>
       <view class="cu-item shadow">
         <view class="image">
-          <image src="{{item.image}}" mode="widthFix"></image>
+          <image src="{{item.imageUrl}}" mode="widthFix"></image>
         </view>
         <view class="cu-list menu-avatar">
           <view class="cu-item" style="height:100rpx;">
             <view class="flex-sub">
               <view class="text-grey text-left">{{item.title}}</view>
               <view class="text-gray text-sm flex justify-between">
-                {{item.date}}
+                {{item.createdTime}}
                 <view class="text-gray text-sm">
                   <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.appreciate}}
                 </view>

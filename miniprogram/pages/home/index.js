@@ -10,7 +10,7 @@ const TAGS = [{
   },
   {
     key: 'community',
-    title: '社区'
+    title: '发现'
   }
 ]
 

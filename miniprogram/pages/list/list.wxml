@@ -4,8 +4,8 @@
   <view slot="content">{{info.title}}</view>
 </cu-custom>
 
-<scroll-view scroll-y class="scrollPage">
-  <image src="{{info.icon}}" mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+<scroll-view scroll-y class="scrollPage" bindscrolltolower="scrolltolower">
+  <image src="{{info.iconUrl}}" mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
   <view class="header">
     <view class="title">{{info.title}}</view>
     <view class="desc">{{info.desc}}</view>
@@ -14,7 +14,7 @@
   <view class="cu-card case" wx:for="{{list}}" wx:key>
     <view class="cu-item shadow">
       <view class="image" bindtap="enterPlayPage" data-item="{{item}}">
-        <image src="{{item.image}}" mode="widthFix"></image>
+        <image src="{{item.imageUrl}}" mode="widthFix"></image>
         <view class="cu-tag bg-blue">{{item.tag}}</view>
         <view class="cu-bar bg-shadeBottom">
           <text class="text-cut">{{item.desc}}</text>
@@ -22,15 +22,15 @@
       </view>
       <view class="cu-list menu-avatar">
         <view class="cu-item">
-          <view class="cu-avatar round lg" style="background-image:url({{item.avatar}});"></view>
+          <view class="cu-avatar round lg" style="background-image:url({{item.author.avatarUrl}});"></view>
           <view class="content flex-sub">
             <view class="text-grey">{{item.title}}</view>
             <view class="text-gray text-sm flex justify-between">
-              {{item.date}}
+              {{item.createdTime}}
               <view class="text-gray text-sm">
                 <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.attention}}
                 <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.appreciate}}
-                <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.message}}
+                <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.comments.length}}
               </view>
             </view>
           </view>

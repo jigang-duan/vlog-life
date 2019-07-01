@@ -1,4 +1,10 @@
 // miniprogram/pages/play/play.js
+const util = require('../../utils/util.js')
+
+const app = getApp();
+
+const vid2vUrl = vid => vid && `https://baobab.kaiyanapp.com/api/v1/playUrl?vid=${vid}&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&ptl=true`
+
 Page({
 
   /**
@@ -6,7 +12,6 @@ Page({
    */
   data: {
     info: {},
-    src: 'https://baobab.kaiyanapp.com/api/v1/playUrl?vid=163507&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&ptl=true',
     played: []
   },
 
@@ -20,13 +25,18 @@ Page({
       items: info.items.map(it => {
         return {
           ...it,
-          src: it.src ? it.src : `https://baobab.kaiyanapp.com/api/v1/playUrl?vid=${it.vid}&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&ptl=true`
+          createdTime: util.formatDateTime(new Date(it.createdTime)),
+          videoUrl: it.videoUrl ? it.videoUrl : vid2vUrl(it.vid)
         }
       })
     }
-    console.info(vinfo)
+
+    console.log(vinfo)
+
     this.setData({
-      info: vinfo
+      info: vinfo,
+      oneself: vinfo.authorId === app.globalData.openid,
+      isShared: vinfo.isShared
     })
   },
 
@@ -53,6 +63,32 @@ Page({
     info.items[index].played = true
     this.setData({
       info
+    })
+  },
+
+  tapShare(e) {
+    const id = this.data.info.id
+    app.getUserOpenId((err, openid) => {
+      if (err) {
+        return
+      }
+      wx.request({
+        url: `${app.globalData.config.baseUrl}/foods/${id}/shard`,
+        method: 'PUT',
+        header: {
+          'x-userid': openid
+        },
+        success: res => {
+          if (res.statusCode === 200) {
+            this.setData({
+              isShared: true
+            })
+          }
+        },
+        fail: err => {
+          console.error(err)
+        }
+      })
     })
   }
 })
