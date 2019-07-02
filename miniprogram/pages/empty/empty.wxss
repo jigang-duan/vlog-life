@@ -2,4 +2,11 @@
 .fullscreen {
   width: 100vw;
   height: 100vh;
+  background-color: white;
+}
+
+.fullscreen .centre {
+   position: relative;
+  top: 50%; /*偏移*/
+  transform: translateY(-80%);
 }

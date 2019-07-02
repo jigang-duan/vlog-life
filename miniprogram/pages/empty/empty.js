@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    emptyUrl: `${app.globalData.config.baseUrl}/public/empty.gif`
+    emptyUrl: `${app.globalData.config.baseUrl}/public/empty.jpg`
   },
 
   /**
