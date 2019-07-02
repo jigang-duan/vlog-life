@@ -3,9 +3,9 @@
 
   <view class="grid col-2 margin-bottom text-center">
     <view class="cu-card case" wx:for="{{list}}" wx:key>
-      <view class="cu-item shadow">
+      <view class="cu-item shadow" bindtap="enterPlayPage" data-item="{{item}}" data-other="{{true}}">
         <view class="image">
-          <image src="{{item.imageUrl}}" mode="widthFix"></image>
+          <image src="{{item.imageUrl}}" mode="aspectFill" style="height:243rpx;"></image>
         </view>
         <view class="cu-list menu-avatar">
           <view class="cu-item" style="height:100rpx;">

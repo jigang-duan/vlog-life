@@ -1,0 +1,3 @@
+<view class="cu-bar btn-group bg-white shadow foot">
+  <button form-type="submit" class="cu-btn bg-blue shadow-blur round">提交</button>
+</view>

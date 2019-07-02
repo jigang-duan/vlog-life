@@ -19,7 +19,7 @@ Page({
   enterPlayPage: function(e) {
     const info = e.currentTarget.dataset.item
     wx.navigateTo({
-      url: `/pages/play/play?info=${JSON.stringify(info)}`
+      url: `/pages/play/play?id=${info.id}`
     })
   },
 

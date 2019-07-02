@@ -1,0 +1,21 @@
+<!--miniprogram/pages/publish/theme/video/video.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">新增视频</view>
+</cu-custom>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="cu-form-group margin-top">
+    <view class="title">标题</view>
+    <input name="title" placeholder="请输入分类的标题"></input>
+  </view>
+
+  <view class="cu-form-group align-start">
+    <view class="title">描述</view>
+    <textarea name="desc" maxlength="-1" placeholder="请输入分类的描述"></textarea>
+  </view>
+
+  <include src="group_video.wxml" />
+
+  <include src="footer.wxml" />
+</form>

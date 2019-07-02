@@ -5,12 +5,22 @@ const app = getApp();
 
 const vid2vUrl = vid => vid && `https://baobab.kaiyanapp.com/api/v1/playUrl?vid=${vid}&resourceType=video&editionType=default&source=aliyun&playUrlType=url_oss&ptl=true`
 
+const showToast = (title) => {
+  wx.showToast({
+    title: title,
+    icon: 'loading',
+    mask: true,
+    duration: 1000
+  })
+}
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    id: null,
     info: {},
     played: []
   },
@@ -19,24 +29,40 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const info = JSON.parse(options.info)
-    const vinfo = {
-      ...info,
-      items: info.items.map(it => {
-        return {
-          ...it,
-          createdTime: util.formatDateTime(new Date(it.createdTime)),
-          videoUrl: it.videoUrl ? it.videoUrl : vid2vUrl(it.vid)
+    this.setData({
+      id: options.id,
+      other: options.other
+    })
+  },
+
+  onShow: function () {
+    const self = this
+    const foodId = this.data.id
+    const other = this.data.other
+    app.getUserOpenId((err, openid) => {
+      if (err) {
+        return
+      }
+      showToast('...')
+      wx.request({
+        url: `${app.globalData.config.baseUrl}/foods/${foodId}`,
+        method: 'GET',
+        header: {
+          'x-userid': openid
+        },
+        success(res) {
+          wx.hideToast()
+          if (res.statusCode > 300) {
+            return
+          }
+          const info = res.data
+          self.setData({
+            info,
+            oneself: other ? false : info.authorId === app.globalData.openid,
+            isShared: info.isShared
+          })
         }
       })
-    }
-
-    console.log(vinfo)
-
-    this.setData({
-      info: vinfo,
-      oneself: vinfo.authorId === app.globalData.openid,
-      isShared: vinfo.isShared
     })
   },
 
@@ -44,6 +70,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    console.log('on ready')
     this.videoContexts = this.data.info.items.map(it => wx.createVideoContext(`myVideo-${it.id}`))
   },
 

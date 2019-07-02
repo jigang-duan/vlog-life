@@ -4,7 +4,9 @@
     "pages/home/category/add/form_add_category",
     "pages/list/list",
     "pages/play/play",
-    "pages/publish/single/single"
+    "pages/publish/single/single",
+    "pages/publish/theme/theme",
+    "pages/publish/theme/video/video"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

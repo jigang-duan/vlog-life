@@ -19,4 +19,8 @@
     <text class="cuIcon-share"></text>
     {{ isShared ? '已分享' : '分享' }}
   </button>
+  <navigator wx:if="{{info.type === 'theme'}}" class="cu-btn bar-item bg-white text-olive" url="/pages/publish/theme/video/video?foodId={{info.id}}">
+    <text class="cuIcon-add"></text>
+    新增视频
+  </navigator>
 </view>

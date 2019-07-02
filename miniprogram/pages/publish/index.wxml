@@ -1,6 +1,6 @@
 <view class="cu-list menu shadow-lg radius">
   <view class="cu-item">
-    <navigator class="content" url="/pages/publish/single/single" hover-class="none">
+    <navigator class="content" url="/pages/publish/theme/theme" hover-class="none">
       <text class="text-grey">发布主题</text>
     </navigator>
   </view>

@@ -1,0 +1,32 @@
+<!--miniprogram/pages/publish/theme/theme.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">发布主题</view>
+</cu-custom>
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="cu-form-group margin-top">
+    <view class="title">标题</view>
+    <input name="title" placeholder="请输入分类的标题"></input>
+  </view>
+
+  <view class="cu-form-group align-start">
+    <view class="title">描述</view>
+    <textarea name="desc" maxlength="-1" placeholder="请输入分类的描述"></textarea>
+  </view>
+
+  <view class="cu-form-group">
+		<view class="title">分类</view>
+		<picker bindchange="PickerChange" value="{{categoryIdx}}" range-key="title" range="{{categorys}}">
+			<view class="picker">
+				{{categoryIdx?categorys[categoryIdx].title:'请选择'}}
+			</view>
+		</picker>
+	</view>
+
+  <include src="group_img.wxml" />
+  <!-- <include src="group_video.wxml" /> -->
+
+  <include src="footer.wxml" />
+</form>
+

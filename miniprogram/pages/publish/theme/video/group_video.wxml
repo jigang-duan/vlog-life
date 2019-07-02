@@ -1,0 +1,21 @@
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    视频上传
+  </view>
+  <view class="action">
+    {{videoList.length}}/1
+  </view>
+</view>
+<view class="cu-form-group">
+  <view class="grid col-4 grid-square flex-sub">
+    <view class="bg-img" wx:for="{{videoList}}" wx:key="{{index}}" bindtap="ViewVideo" data-url="{{videoList[index]}}">
+      <image src='{{videoList[index]}}' mode='aspectFill'></image>
+      <view class="cu-tag bg-red" catchtap="DelVideo" data-index="{{index}}">
+        <text class="cuIcon-close"></text>
+      </view>
+    </view>
+    <view class="solids" bindtap="ChooseVideo" wx:if="{{videoList.length<1}}">
+      <text class="cuIcon-add"></text>
+    </view>
+  </view>
+</view>
