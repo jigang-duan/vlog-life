@@ -6,7 +6,8 @@
     "pages/play/play",
     "pages/publish/single/single",
     "pages/publish/theme/theme",
-    "pages/publish/theme/video/video"
+    "pages/publish/theme/video/video",
+    "pages/empty/empty"
   ],
   "window": {
     "navigationBarBackgroundColor": "#39b54a",

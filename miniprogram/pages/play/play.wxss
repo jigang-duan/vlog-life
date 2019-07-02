@@ -1,4 +1,8 @@
 /* miniprogram/pages/play/play.wxss */
+.bg-transparent {
+  background-color: transparent;
+	color: var(--white);
+}
 
 .bar-item {
   flex: 1;

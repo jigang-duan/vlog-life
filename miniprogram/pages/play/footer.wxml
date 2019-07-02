@@ -14,12 +14,12 @@
   </button>
 </view> -->
 
-<view wx:if="{{oneself}}" class="cu-bar tabbar bg-white foot">
-  <button disabled="{{isShared}}" class="cu-btn bar-item bg-white text-blue" bindtap="tapShare">
+<view wx:if="{{oneself}}" class="cu-bar tabbar bg-transparent foot" style="background-image:{{color}}">
+  <button wx:if="{{!isShared}}" class="cu-btn bar-item bg-transparent text-blue" bindtap="tapShare">
     <text class="cuIcon-share"></text>
     {{ isShared ? '已分享' : '分享' }}
   </button>
-  <navigator wx:if="{{info.type === 'theme'}}" class="cu-btn bar-item bg-white text-olive" url="/pages/publish/theme/video/video?foodId={{info.id}}">
+  <navigator wx:if="{{info.type === 'theme'}}" class="cu-btn bar-item bg-transparent text-olive" url="/pages/publish/theme/video/video?foodId={{info.id}}">
     <text class="cuIcon-add"></text>
     新增视频
   </navigator>

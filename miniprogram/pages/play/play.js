@@ -61,6 +61,18 @@ Page({
             oneself: other ? false : info.authorId === app.globalData.openid,
             isShared: info.isShared
           })
+          wx.request({
+            url: `${app.globalData.config.baseUrl}/multipart/color`,
+            data: {
+              url: info.imageUrl
+            },
+            success(res) {
+              const color = `linear-gradient(45deg, ${res.data[0].color}, ${res.data[1].color})`
+              self.setData({
+                color
+              })
+            }
+          })
         }
       })
     })

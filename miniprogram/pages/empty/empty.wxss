@@ -1,0 +1,5 @@
+/* miniprogram/pages/empty/empty.wxss */
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
