@@ -33,10 +33,11 @@ npm run lint
 
 ## 截图
 
-![1](./doc/2601562303135_.pic.jpg)
-![2](./doc/2611562303185_.pic.jpg)
-![3](./doc/2621562303214_.pic.jpg)
-![4](./doc/2631562303243_.pic.jpg)
-![5](./doc/2641562303291_.pic.jpg)
-![6](./doc/2651562303350_.pic.jpg)
-
+<div >
+    <img src="./doc/2601562303135_.pic.jpg" width="200px" height="auto" alt="日历效果图"/>
+    <img src="./doc/2611562303185_.pic.jpg" width="200px" height="auto" alt="日历效果图"/>
+    <img src="./doc/2621562303214_.pic.jpg" width="200px" height="auto" alt="日历效果图"/>
+    <img src="./doc/2631562303243_.pic.jpg" width="200px" height="auto" alt="日历效果图"/>
+    <img src="./doc/2641562303291_.pic.jpg" width="200px" height="auto" alt="日历效果图"/>
+    <img src="./doc/2651562303350_.pic.jpg" width="200px" height="auto" alt="日历效果图"/>
+</div>
