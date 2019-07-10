@@ -11,24 +11,24 @@
       <view class="cu-item shadow" wx:for="{{info.items}}" wx:key="{{item.id}}" style="background-color: transparent;">
         <view class="container-head">
           <view class="player tc">
-            <video id="myVideo-{{item.id}}" src="{{item.videoUrl}}" controls style="width:100%;height:464rpx;" poster="{{item.image}}" bindplay="onPlay" data-index="{{index}}"></video>
-            <view wx:if="{{!item.played}}" class="cover" style="background-image: url('{{item.imageUrl}}');"></view>
-            <view wx:if="{{!item.played}}" class="play-button" bindtap="play" data-index="{{index}}">
+            <video id="myVideo-{{item.id}}" src="{{item.videoUrl}}" controls style="width:100%;height:464rpx;" poster="{{item.imageUrl || info.imageUrl}}" bindplay="onPlay" data-index="{{index}}" bindprogress="onProgress"></video>
+            <!-- <view wx:if="{{false && !item.played}}" class="cover" style="background-image: url('{{item.imageUrl}}');"></view>
+            <view wx:if="{{false && !item.played}}" class="play-button" bindtap="play" data-index="{{index}}">
               <image style="width: 100rpx; height: 100rpx;" src="/images/icon_play.png" mode="scaleToFill"></image>
-            </view>
+            </view> -->
           </view>
         </view>
         <view class="cu-list menu-avatar">
           <view class="cu-item" style="background-color: transparent;">
             <view class="padding flex-sub">
-              <view class="text-xl">{{item.title}}</view>
+              <view class="text-gray text-xl">{{item.title}}</view>
               <view class="text-gray text-sm flex justify-between">
                 {{item.createdTime}}
               </view>
             </view>
           </view>
         </view>
-        <view class="text-content">
+        <view class="text-content text-gray">
           {{item.desc}}
         </view>
       </view>

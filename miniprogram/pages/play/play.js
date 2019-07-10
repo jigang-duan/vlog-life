@@ -83,7 +83,10 @@ Page({
    */
   onReady: function () {
     console.log('on ready')
-    this.videoContexts = this.data.info.items.map(it => wx.createVideoContext(`myVideo-${it.id}`))
+    if (this.data.info.items) {
+      this.videoContexts = this.data.info.items
+        .map(it => wx.createVideoContext(`myVideo-${it.id}`))
+    }
   },
 
   play: function (e) {
@@ -94,6 +97,10 @@ Page({
   onPlay: function (e) {
     const index = e.target.dataset.index
     const info = this.data.info
+    if (!this.videoContexts && this.data.info.items) {
+      this.videoContexts = this.data.info.items
+        .map(it => wx.createVideoContext(`myVideo-${it.id}`))
+    }
     this.videoContexts.forEach((ctx, i) => {
       if (index !== i) {
         ctx.pause()
@@ -103,6 +110,10 @@ Page({
     this.setData({
       info
     })
+  },
+
+  onProgress: function (e) {
+    console.info(e.detail)
   },
 
   tapShare(e) {
