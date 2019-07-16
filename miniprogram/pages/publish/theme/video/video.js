@@ -53,7 +53,7 @@ Page({
   ChooseVideo() {
     wx.chooseVideo({
       sourceType: ['album'],
-      maxDuration: 0,
+      maxDuration: 120,
       success: (res) => {
         console.info(res)
         apis.uploadFile(res.thumbTempFilePath, (videoThumbUrl) => {

@@ -17,6 +17,9 @@ __目前域名正在备案期间，尚没有二维码__
 
 使用[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)打开该项目
 
+- 修改详情里的 `APPID`
+- 修改 config.js 里的地址
+
 在编写代码之前，请在项目根目录运行以下命令安装依赖：
 
 ```bash
